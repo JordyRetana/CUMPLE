@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumpleaños</title>
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style12.css">
+  <style>
+    /* Agrega estilos personalizados aquí si es necesario */
+    .btn-container {
+      text-align: center;
+      padding-top: 20px;
+      position: relative;
+    }
+    .btn-container button {
+      margin: 0 10px;
+    }
+    .btn-left {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+    .btn-right {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    /* Estilos personalizados para los botones "N" y "G" */
+    .btn-dark-custom {
+      background-color: rgb(33, 35, 35); /* Color de fondo oscuro */
+      color: white; /* Color del texto en blanco */
+    }
+
+    /* Estilos para el contador */
+    #contador-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 24px;
+      animation: zoomIn 0.5s ease; /* Animación de zoom */
+    }
+
+    /* Animación de zoom */
+    @keyframes zoomIn {
+      0% {
+        transform: translateX(-50%) scale(0);
+      }
+      100% {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Pide Un Deseo...<br/>... Y apaga la vela
+  </h1>
+  <div id="glow" class="glow"></div>
+  <div id="candle">
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div id="top">
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div class="smoke"></div>
+      <div id="knot"></div>
+      <div id="flame" class="burn"></div>
+    </div>
+  </div>
+  </div>
+  <!-- Contador con animación -->
+  <div id="contador-container">
+    <span id="contador">10</span>
+  </div>
+
+  <!-- partial -->
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+  <script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+  <script  src="./script12.js"></script>
+
+  <script>
+    // Función para iniciar el contador
+    function iniciarContador() {
+      var contador = 10; // Establece el valor inicial del contador
+      var contadorElemento = document.getElementById('contador');
+
+      // Actualiza el contador cada segundo
+      var intervalo = setInterval(function() {
+        contador--;
+        contadorElemento.textContent = contador;
+
+        // Cuando el contador llega a cero, redirige a "indexcarta.html"
+        if (contador === 0) {
+          clearInterval(intervalo); // Detiene el contador
+          window.location.href = 'indexcarta.html'; // Redirige la página
+        }
+      }, 1000); // Intervalo de 1 segundo
+    }
+
+    // Llama a la función para iniciar el contador cuando la página se carga completamente
+    window.onload = iniciarContador;
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    border: 1px solid #72582c;
+    border-radius: 5px;
+    align-items: center;
+    background-image: url(nana.png);
+    background-repeat: no-repeat;
+    background-size: 90%; /* Cambia el valor para ajustar el tamaño de la imagen */
+    background-position: center bottom;
+    padding: 20px;
+}
+
+.form h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.form .login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login input,
+.login button {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    font-size: 16px;
+}
+
+.login input {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    text-indent: 35px;
+    background-image: url(user.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 15px center;
+}
+
+.login input:nth-child(2) {
+    background-image: url(lock.png);
+}
+
+.login input::placeholder {
+    font-size: 14px;
+    color: #c0b4b4;
+}
+
+.login button {
+    background-color: #d38a1c;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Calibri', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #ffaf2c; /* Cambia el color al pasar el ratón para hacerlo más cariñoso */
+}
+
+.suggests {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Calibri', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.suggests .forgot {
+    color: #d38a1c;
+    cursor: pointer;
+}
+

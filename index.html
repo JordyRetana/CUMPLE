@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGALO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <h4>INICIO DE LA NIÑA</h4>
+        <div class="login">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="loginButton">Sign In</button>
+        </div>
+    </div>
+    <script>
+        // Función para redirigir a la página "index1.html" en el mismo directorio
+        function redirectToIndex1() {
+            window.location.href = 'index1.html';
+        }
+
+        // Agregar un evento click al botón de inicio de sesión
+        document.getElementById('loginButton').addEventListener('click', function() {
+            // Obtiene el valor del campo de usuario y contraseña
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Verifica las credenciales
+            if (username === 'NIÑA' && password === 'viejillo chismoso') {
+                // Si las credenciales son correctas, redirige a "index1.html"
+                redirectToIndex1();
+            } else {
+                // Si las credenciales son incorrectas, muestra un mensaje de error
+                alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+            }
+        });
+    </script>
+</body>
+</html>
